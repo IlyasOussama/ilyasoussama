@@ -313,7 +313,9 @@ const Home: NextPage = () => {
                   <a href="#" title="" className="block aspect-w-4 aspect-h-3">
                     <Image
                       className="object-cover w-full h-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-3.jpg"
+                      height={400}
+                      width={700}
+                      src="/01.jpg"
                       alt=""
                     />
                   </a>
@@ -367,7 +369,9 @@ const Home: NextPage = () => {
                   <a href="#" title="" className="block aspect-w-4 aspect-h-3">
                     <Image
                       className="object-cover w-full h-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-3.jpg"
+                      height={400}
+                      width={700}
+                      src="/01.jpg"
                       alt=""
                     />
                   </a>
