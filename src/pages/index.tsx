@@ -7,8 +7,6 @@ import { getAllPosts } from "../lib/api";
 import { FileTextIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
-import a from "../components/try";
-
 import Button from "../components/Buttons/Button";
 import ThemeButton from "../components/Buttons/ThemeButton";
 import Navbar from "../components/Layout/Navbar";
@@ -17,7 +15,6 @@ import CustomLink from "../components/Links/CustomLink";
 import UnstyledLink from "../components/Links/UnstyledLink";
 import ProjectCard from "../components/ProjectCard";
 import CustomTooltip from "../components/Tooltip";
-import Try from "../components/try";
 import BlogCardTwo from "../components/Blog/BlogCardTwo";
 import Link from "next/link";
 import ButtonLink from "../components/Links/ButtonLink";
@@ -314,7 +311,7 @@ const Home: NextPage = () => {
               <div className="p-5">
                 <div className="relative">
                   <a href="#" title="" className="block aspect-w-4 aspect-h-3">
-                    <img
+                    <Image
                       className="object-cover w-full h-full"
                       src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-3.jpg"
                       alt=""
@@ -368,7 +365,7 @@ const Home: NextPage = () => {
               <div className="p-5">
                 <div className="relative">
                   <a href="#" title="" className="block aspect-w-4 aspect-h-3">
-                    <img
+                    <Image
                       className="object-cover w-full h-full"
                       src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-3.jpg"
                       alt=""

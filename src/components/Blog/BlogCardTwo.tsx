@@ -31,7 +31,7 @@ const BlogCardTwo = ({
         <div className="relative">
           <Link as={`/blog/${postLink}`} href="/blog/[slug] ">
             <a className="hover:underline block aspect-w-4 aspect-h-3">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-3.jpg"
                 alt=""
