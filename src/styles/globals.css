@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tw-clr-primary-200: 219 255 0;
+  --tw-clr-primary-300: 0 232 135;
+  --tw-clr-primary-400: 0 224 243;
+  --tw-clr-primary-500: 0 196 253;
+
+  --clr-primary-200: rgb(var(--tw-clr-primary-200));
+  --clr-primary-300: rgb(var(--tw-clr-primary-300));
+  --clr-primary-400: rgb(var(--tw-clr-primary-400));
+  --clr-primary-500: rgb(var(--tw-clr-primary-500));
+}
+
+@layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(to right, var(--clr-primary-300), var(--clr-primary-400));
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.3s ease;
+    transition-property: background-size, color, background-color, border-color;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animated-underline {
+      transition: none;
+    }
+  }
+  .animated-underline:hover,
+  .animated-underline:focus-visible,
+  .project-card:hover .animated-underline,
+  .project-card:focus-visible .animated-underline {
+    background-size: 0 2px, 100% 2px;
+  }
+}
