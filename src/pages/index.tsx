@@ -93,11 +93,20 @@ const Home = ({ allPosts }: Props) => {
         <section className="mt-20">
           <h2 className="text-3xl font-bold mb-6">Teck Stack</h2>
           <div className="">
-            <div className="grid grid-cols-2 gap-2 font-normal">
+            <div className="grid grid-row-2 md:grid-cols-2 gap-2 font-normal">
               <div className="text-center align-middle">
                 <CustomTooltip content="javascript">
                   <Image
                     src="/javascript.svg"
+                    width={96}
+                    height={96}
+                    alt="javascript"
+                    className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
+                  />
+                </CustomTooltip>
+                <CustomTooltip content="typescript">
+                  <Image
+                    src="/typescript.svg"
                     width={96}
                     height={96}
                     alt="javascript"
