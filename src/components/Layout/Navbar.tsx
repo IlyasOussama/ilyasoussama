@@ -31,8 +31,8 @@ const NavItem = ({ href, text }: NavItemProps) => {
 
 const Navbar = () => {
   return (
-    <nav className="py-4 flex justify-between items-center">
-      <div>Logo</div>
+    <nav className="py-4 mx-6 xl:mx-auto flex justify-between items-center">
+      <div className="hidden md:inline-block">Logo</div>
       <div>
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
@@ -41,7 +41,7 @@ const Navbar = () => {
         <NavItem href="/blog" text="Blog" />
         <NavItem href="#contact" text="Contact Me" />
       </div>
-      <ThemeButton />
+      <ThemeButton className="hidden md:inline-block" />
     </nav>
   );
 };

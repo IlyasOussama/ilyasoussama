@@ -2,10 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import CopyToClipboard from "react-copy-to-clipboard";
 import { getAllPosts } from "../lib/api";
 
 import { FileTextIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { useState } from "react";
 
 import Button from "../components/Buttons/Button";
 import AllPosts from "../components/Blog/AllPosts";
@@ -29,6 +31,8 @@ type Props = {
 const Home = ({ allPosts }: Props) => {
   const { theme, setTheme } = useTheme();
 
+  const [copyStatus, setCopyStatus] = useState("Click the mail logo to copy");
+
   const homePosts: Post[] = [];
   const morePosts = allPosts.slice(1);
   homePosts.push(morePosts[0]);
@@ -45,7 +49,7 @@ const Home = ({ allPosts }: Props) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen max-w-6xl mx-auto ">
+      <main className="h-screen mx-6 xl:mx-auto max-w-6xl ">
         {/* <div className="mt-20 mx-4 sm:mx-auto grid">
           <h3 className="text-lg font-semibold mb-2">Hi ! I&#39;m Ilyas</h3>
           <p className="text-7xl font-bold mb-4">
@@ -214,7 +218,7 @@ const Home = ({ allPosts }: Props) => {
 
         <div className="mt-20" id="projects">
           <h2 className="text-3xl font-bold mb-6">Feautured Projects</h2>
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-col gap-5 md:flex-row">
             <ProjectCard
               projectName="Project 01"
               projectDescription="das dkw erw mcxz ewqnm mnfsdew korw mcxvsd jrkwe nmrkwe jnkwer ncx"
@@ -239,6 +243,22 @@ const Home = ({ allPosts }: Props) => {
             Reach me out
           </p>
           <div>
+            <CustomTooltip
+              content={`{copyStatus} zghariilyasoussama@gmail.com`}
+            >
+              <CopyToClipboard
+                text="zghariilyasoussama@gmail.com"
+                onCopy={() => {
+                  setCopyStatus("Copied to clipboard 🥳");
+                  setTimeout(
+                    () => setCopyStatus("Click the mail logo to copy"),
+                    1500
+                  );
+                }}
+              >
+                <Image src="/gmail.svg" width={36} height={36} alt="gmail" />
+              </CopyToClipboard>
+            </CustomTooltip>
             <UnstyledLink
               className="inline-flex items-center justify-center rounded-sm focus:outline-none focus-visible:ring focus-visible:ring-primary-300"
               href="https://github.com/IlyasOussama"

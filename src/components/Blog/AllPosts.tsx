@@ -6,7 +6,6 @@ type Props = {
 };
 
 const AllPosts = ({ posts }: Props) => {
-  console.log(posts);
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-8 gap-y-8 md:gap-y-8 mb-8">
       {posts.map((post) => (
