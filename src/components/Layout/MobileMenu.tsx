@@ -62,7 +62,7 @@ export default function MobileMenu() {
 
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "150ms" }}
+            style={{ transitionDelay: "175ms" }}
             onClick={toggleMenu}
           >
             <Link href="/blog">
@@ -72,7 +72,7 @@ export default function MobileMenu() {
 
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "150ms" }}
+            style={{ transitionDelay: "200ms" }}
             onClick={toggleMenu}
           >
             <Link href="/projects">
@@ -82,7 +82,7 @@ export default function MobileMenu() {
 
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "150ms" }}
+            style={{ transitionDelay: "250ms" }}
             onClick={toggleMenu}
           >
             <Link href="/techstack">
@@ -92,7 +92,7 @@ export default function MobileMenu() {
 
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "150ms" }}
+            style={{ transitionDelay: "300ms" }}
             onClick={toggleMenu}
           >
             <Link href="/about">
@@ -102,7 +102,7 @@ export default function MobileMenu() {
 
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "150ms" }}
+            style={{ transitionDelay: "350ms" }}
             onClick={toggleMenu}
           >
             <Link href="#contact">
