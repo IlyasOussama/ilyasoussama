@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { trpc } from "../utils/trpc";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { getAllPosts } from "../lib/api";
