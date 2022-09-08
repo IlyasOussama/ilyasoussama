@@ -1,7 +1,8 @@
 ---
-title: "Learn How to Pre-render Pages Using Static Generation with Next.js"
+title: "I left medical school after more than 5 years"
 excerpt: "aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
-coverImage: "/assets/blog/hello-world/cover.jpg"
+
+coverImage: "/02.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Tim Neutkens

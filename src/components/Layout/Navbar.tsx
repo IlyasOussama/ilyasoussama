@@ -36,7 +36,7 @@ const Navbar = () => {
       <div>
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
-        <NavItem href="/tech-stack" text="Teck Stack" />
+        <NavItem href="/techstack" text="Teck Stack" />
         <NavItem href="/projects" text="Projects" />
         <NavItem href="/blog" text="Blog" />
         <NavItem href="#contact" text="Contact Me" />

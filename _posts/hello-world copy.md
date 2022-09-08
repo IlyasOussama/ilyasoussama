@@ -1,7 +1,8 @@
 ---
-title: "Learn How to Pre-render Pages Using Static Generation with Next.js"
-excerpt: "aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
-coverImage: "/assets/blog/hello-world/cover.jpg"
+title: "It's didn't take me 3 months, it toke me 3 years and it's totaly worth it"
+excerpt: ""
+
+coverImage: "/01.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Tim Neutkens

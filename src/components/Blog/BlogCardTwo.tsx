@@ -3,7 +3,7 @@ import Link from "next/link";
 import UnstyledLink from "../Links/UnstyledLink";
 
 type BlogCardProps = {
-  postImage?: string;
+  postImage: string;
   postTitle: string;
   postDescription?: string;
   postLink: string;
@@ -35,7 +35,7 @@ const BlogCardTwo = ({
                 className="object-cover w-full h-full"
                 height={350}
                 width={450}
-                src="/01.jpg"
+                src={postImage}
                 alt=""
               />
             </a>

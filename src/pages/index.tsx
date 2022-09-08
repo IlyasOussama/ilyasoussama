@@ -8,6 +8,7 @@ import { FileTextIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import Button from "../components/Buttons/Button";
+import AllPosts from "../components/Blog/AllPosts";
 import ThemeButton from "../components/Buttons/ThemeButton";
 import Navbar from "../components/Layout/Navbar";
 import BlogCard from "../components/Blog/BlogCard";
@@ -19,10 +20,21 @@ import BlogCardTwo from "../components/Blog/BlogCardTwo";
 import Link from "next/link";
 import ButtonLink from "../components/Links/ButtonLink";
 
-const Home: NextPage = () => {
+import Post from "../interfaces/post";
+
+type Props = {
+  allPosts: Post[];
+};
+
+const Home = ({ allPosts }: Props) => {
   const { theme, setTheme } = useTheme();
 
-  const Tech = ["qb", "ss"];
+  const homePosts: Post[] = [];
+  const morePosts = allPosts.slice(1);
+  homePosts.push(morePosts[0]);
+  homePosts.push(morePosts[1]);
+  homePosts.push(morePosts[2]);
+
   return (
     <>
       <Head>
@@ -55,10 +67,12 @@ const Home: NextPage = () => {
         </div>
 
         <div className="mt-6">
-          <Button variant="cta" className="mr-2">
+          <ButtonLink className="mt-4 mr-2" href="#projects">
             Projects
-          </Button>
-          <Button variant="default">Blog</Button>
+          </ButtonLink>
+          <ButtonLink className="mt-4" href="#blog">
+            Blog
+          </ButtonLink>
         </div>
 
         {/* <div className="mt-2 flex flex-row gap-4">
@@ -72,7 +86,7 @@ const Home: NextPage = () => {
           </div>
         </div> */}
 
-        <div className="mt-20">
+        <section className="mt-20">
           <h2 className="text-3xl font-bold mb-6">Teck Stack</h2>
           <div className="">
             <div className="grid grid-cols-2 gap-2 font-normal">
@@ -102,6 +116,7 @@ const Home: NextPage = () => {
                       width={96}
                       height={96}
                       alt="twitter"
+                      className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
                     />
                   ) : (
                     <Image
@@ -109,6 +124,7 @@ const Home: NextPage = () => {
                       width={96}
                       height={96}
                       alt="twitter"
+                      className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
                     />
                   )}
                 </CustomTooltip>
@@ -128,6 +144,7 @@ const Home: NextPage = () => {
                       width={96}
                       height={96}
                       alt="twitter"
+                      className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
                     />
                   ) : (
                     <Image
@@ -135,6 +152,7 @@ const Home: NextPage = () => {
                       width={96}
                       height={96}
                       alt="twitter"
+                      className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
                     />
                   )}
                 </CustomTooltip>
@@ -154,6 +172,7 @@ const Home: NextPage = () => {
                       width={96}
                       height={96}
                       alt="twitter"
+                      className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
                     />
                   ) : (
                     <Image
@@ -161,6 +180,7 @@ const Home: NextPage = () => {
                       width={96}
                       height={96}
                       alt="twitter"
+                      className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
                     />
                   )}
                 </CustomTooltip>
@@ -173,270 +193,40 @@ const Home: NextPage = () => {
                 build a server/API my go to is Nodejs (Expressjs/fastify).
               </p>
             </div>
-            {/* 
-            <div className="grid grid-cols-2 gap-6">
-              <p className="align-middle">
-                When I need to build a server I usualy go the Nodejs Express
-                route.
-              </p>
-              <div className="text-center align-middle">
-                <Image
-                  src="/node-js.svg"
-                  className="cursor-pointer"
-                  width={96}
-                  height={96}
-                  alt="typescript"
-                />
-                <Image
-                  src="/express-js.svg"
-                  width={96}
-                  height={96}
-                  alt="typescript"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-2">
-              <div className="text-center align-middle">
-                <Image
-                  src="/postgresql.svg"
-                  className="cursor-pointer"
-                  width={96}
-                  height={96}
-                  alt="typescript"
-                />
-                <Image
-                  src="/mongodb.svg"
-                  width={96}
-                  height={96}
-                  alt="typescript"
-                />
-                <Image
-                  src="/prisma.svg"
-                  width={96}
-                  height={96}
-                  alt="typescript"
-                />
-              </div>
-              <p className="align-middle">
-                I work with both relational and norelational databases,
-                depending on the need, I use prisma to communicate with the
-                database.
-              </p>
-            </div> */}
           </div>
 
           <ButtonLink
-            href="/teck-stack"
+            href="/techstack"
             variant="default"
             className="mt-8 ml-[50%] translate-x-[-50%]"
           >
             Learn More
           </ButtonLink>
-          {/* <p className="mt-4 text-xl">
-            I write code in javascript/typescript depending on the project size,
-            My framework of choice is nextjs, I like to use tailwindcss for
-            styling. <br /> When I need to build a server outside of nextjs
-            world I go the nodejs and express/fastify route. <br /> Prisma is
-            the solution of choise when comunicating with databases
-          </p> */}
-        </div>
+        </section>
 
-        <div className="mt-20">
+        <section id="blog" className="mt-20">
           <h2 className="text-3xl font-bold mb-6">Feautured Posts</h2>
-          <div className="grid gap-5 grid-cols-3">
-            <BlogCardTwo
-              postImage="/01,jpg"
-              postTitle="Blog Post 01"
-              postLink="nnn.com"
-              creationDate="10/02/2022"
-              postViews={300}
-              readingTime={12}
-              postDescription="aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
-              tag="development"
-            />
-            <BlogCardTwo
-              postImage="/01,jpg"
-              postDescription="aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
-              postTitle="Blog Post 02"
-              postLink="nnn.com"
-              creationDate="10/02/2022"
-              postViews={300}
-              readingTime={12}
-              tag="development"
-            />
-            <BlogCardTwo
-              postImage="/01,jpg"
-              postDescription="aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
-              postTitle="Blog Post 03"
-              postLink="nnn.com"
-              creationDate="10/02/2022"
-              postViews={300}
-              readingTime={12}
-              tag="development"
-            />
-            {/* <BlogCard
-              postTitle="Blog Post Title"
-              postDescription="llds dw meweqw ewmq,dxzc k;lrwem m,fdsew ewm, llds dw meweqw ewmq,dxzc k;lrwem m,fdsew ewm, "
-              postLink="gds.com"
-              creationDate="10/12/2022"
-              readingTime={20}
-              postViews={500}
-            /> */}
-            {/* <BlogCard
-              postTitle="Blog Post Title"
-              postDescription="llds dw meweqw ewmq,dxzc k;lrwem m,fdsew ewm, llds dw meweqw ewmq,dxzc k;lrwem m,fdsew ewm,"
-              postLink="gds.com"
-              creationDate="10/12/2022"
-              readingTime={20}
-              postViews={500}
-            />
-            <BlogCard
-              postTitle="Blog Post Title"
-              postDescription="llds dw meweqw ewmq,dxzc k;lrwem m,fdsew ewm, llds dw meweqw ewmq,dxzc k;lrwem m,fdsew ewm,"
-              postLink="gds.com"
-              creationDate="10/12/2022"
-              readingTime={20}
-              postViews={500}
-            /> */}
-          </div>
+          {homePosts.length > 0 && <AllPosts posts={homePosts} />}
           <ButtonLink className="mt-4" href="/blog">
             Read More
           </ButtonLink>
-        </div>
+        </section>
 
-        <div className="mt-20">
+        <div className="mt-20" id="projects">
           <h2 className="text-3xl font-bold mb-6">Feautured Projects</h2>
           <div className="flex flex-row gap-5">
-            <div className="overflow-hidden bg-white rounded shadow dark:bg-gray-900 dark:shadow-gray-800">
-              <div className="p-5">
-                <div className="relative">
-                  <a href="#" title="" className="block aspect-w-4 aspect-h-3">
-                    <Image
-                      className="object-cover w-full h-full"
-                      height={400}
-                      width={700}
-                      src="/01.jpg"
-                      alt=""
-                    />
-                  </a>
-
-                  <div className="absolute top-4 left-4">
-                    <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full">
-                      {" "}
-                      Development{" "}
-                    </span>
-                  </div>
-                </div>
-                <span className="block mt-6 text-sm font-semibold tracking-widest text-gray-500 uppercase">
-                  {" "}
-                  May 12, 2020{" "}
-                </span>
-                <p className="mt-5 text-2xl font-semibold">
-                  <a href="#" title="" className="text-black dark:text-white">
-                    {" "}
-                    5 Productivity tips to write faster at morning.{" "}
-                  </a>
-                </p>
-                <p className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim velit mollit.
-                </p>
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-gray-900 dark:text-white transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600"
-                >
-                  Continue Reading
-                  <svg
-                    className="w-5 h-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div className="overflow-hidden bg-white rounded shadow dark:bg-gray-900 dark:shadow-gray-800">
-              <div className="p-5">
-                <div className="relative">
-                  <a href="#" title="" className="block aspect-w-4 aspect-h-3">
-                    <Image
-                      className="object-cover w-full h-full"
-                      height={400}
-                      width={700}
-                      src="/01.jpg"
-                      alt=""
-                    />
-                  </a>
-
-                  <div className="absolute top-4 left-4">
-                    <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full">
-                      {" "}
-                      Development{" "}
-                    </span>
-                  </div>
-                </div>
-                <span className="block mt-6 text-sm font-semibold tracking-widest text-gray-500 uppercase">
-                  {" "}
-                  May 12, 2020{" "}
-                </span>
-                <p className="mt-5 text-2xl font-semibold">
-                  <a href="#" title="" className="text-black dark:text-white">
-                    {" "}
-                    5 Productivity tips to write faster at morning.{" "}
-                  </a>
-                </p>
-                <p className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim velit mollit.
-                </p>
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-gray-900 dark:text-white transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600"
-                >
-                  Continue Reading
-                  <svg
-                    className="w-5 h-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* <ProjectCard
-              projectLink="qq.com"
-              projectName="Project klm"
-              projectDescription="dakls ewkel ewkql fmvcl fer ope rem vdre wre dsc ekq; ewoc rew, dskewm csd"
-              techStack={Tech}
+            <ProjectCard
+              projectName="Project 01"
+              projectDescription="das dkw erw mcxz ewqnm mnfsdew korw mcxvsd jrkwe nmrkwe jnkwer ncx"
+              projectLink="project1"
+              projectImage="/01.jpg"
             />
             <ProjectCard
-              projectLink="qq.com"
-              projectName="Project klm"
-              projectDescription="dakls ewkel ewkql fmvcl fer ope rem vdre wre dsc ekq; ewoc rew, dskewm csd"
-              techStack={Tech}
-            /> */}
-            {/* <ProjectCard
-              projectLink="qq.com"
-              projectName="Project klm"
-              projectDescription="dakls ewkel ewkql fmvcl fer ope rem vdre wre dsc ekq; ewoc rew, dskewm csd"
-              techStack={Tech}
-            /> */}
+              projectName="Project 02"
+              projectDescription="das dkw erw mcxz ewqnm mnfsdew korw mcxvsd jrkwe nmrkwe jnkwer ncx"
+              projectLink="project2"
+              projectImage="/02.jpg"
+            />
           </div>
           <ButtonLink className="mt-4" href="/projects">
             See more project
@@ -503,6 +293,21 @@ const Home: NextPage = () => {
       </main>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
+
+  return {
+    props: { allPosts },
+  };
 };
 
 export default Home;

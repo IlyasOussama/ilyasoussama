@@ -1,7 +1,7 @@
 ---
 title: "Preview Mode for Static Generation"
 excerpt: "aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/01.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Joe Haddad
