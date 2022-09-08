@@ -3,9 +3,10 @@ import Link from "next/link";
 import useDelayedRender from "../../hooks/useDelayedRender";
 import { useState, useEffect } from "react";
 import styles from "./mobileMenu.module.css";
+
 import ThemeButton from "../Buttons/ThemeButton";
 
-export default function MobileMenu() {
+const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
     isMenuOpen,
@@ -32,7 +33,7 @@ export default function MobileMenu() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center mx-6">
+    <div className="relative mx-6">
       <button
         className={clsx(styles.burger, "visible md:hidden")}
         aria-label="Toggle menu"
@@ -46,7 +47,7 @@ export default function MobileMenu() {
         <ul
           className={clsx(
             styles.menu,
-            "flex flex-col absolute bg-gray-50 dark:bg-gray-900",
+            "flex flex-col absolute bg-white dark:bg-gray-900",
             isMenuRendered && styles.menuRendered
           )}
         >
@@ -59,50 +60,45 @@ export default function MobileMenu() {
               <a className="flex w-auto pb-4">Home</a>
             </Link>
           </li>
-
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: "175ms" }}
-            onClick={toggleMenu}
-          >
-            <Link href="/blog">
-              <a className="flex w-auto pb-4">Blog</a>
-            </Link>
-          </li>
-
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "200ms" }}
-            onClick={toggleMenu}
-          >
-            <Link href="/projects">
-              <a className="flex w-auto pb-4">Projects</a>
-            </Link>
-          </li>
-
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "250ms" }}
-            onClick={toggleMenu}
-          >
-            <Link href="/techstack">
-              <a className="flex w-auto pb-4">Tech Stack</a>
-            </Link>
-          </li>
-
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "300ms" }}
             onClick={toggleMenu}
           >
             <Link href="/about">
               <a className="flex w-auto pb-4">About</a>
             </Link>
           </li>
-
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: "350ms" }}
+            style={{ transitionDelay: "200ms" }}
+            onClick={toggleMenu}
+          >
+            <Link href="/techstack">
+              <a className="flex w-auto pb-4">Tech Stack</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: "250ms" }}
+            onClick={toggleMenu}
+          >
+            <Link href="/projects">
+              <a className="flex w-auto pb-4">Projects</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: "275ms" }}
+            onClick={toggleMenu}
+          >
+            <Link href="/blog">
+              <a className="flex w-auto pb-4">Blog</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: "300ms" }}
             onClick={toggleMenu}
           >
             <Link href="#contact">
@@ -111,10 +107,10 @@ export default function MobileMenu() {
           </li>
         </ul>
       )}
-      <ThemeButton className="inline-block md:hidden" />
+      <ThemeButton className="inline-block absolute right-0 top-2 md:hidden" />
     </div>
   );
-}
+};
 
 function MenuIcon(props: JSX.IntrinsicElements["svg"]) {
   return (
@@ -164,3 +160,5 @@ function CrossIcon(props: JSX.IntrinsicElements["svg"]) {
     </svg>
   );
 }
+
+export default MobileMenu;
