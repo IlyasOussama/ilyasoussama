@@ -9,6 +9,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
       <MobileMenu />
       <Navbar />
       {children}
+      <Footer />
     </div>
   );
 };
