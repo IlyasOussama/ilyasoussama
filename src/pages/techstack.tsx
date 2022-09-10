@@ -205,10 +205,11 @@ const TechStack = () => {
               </div>
               <p className="align-middle text-xl">
                 I build website/web applications using Next.js with typescript
-                most the time, I use the Context API/Redux for state managment
-                depending on the need, I use react-query for data fetching, I
-                have used a lot of styling solotions vanilla css, sass,
-                css-in-js but my favorite is tailwindcss.
+                most of the time, I use the Context API/Redux for state
+                management depending on the need, I use react-query for data
+                fetching, I have used a lot of styling solutions vanilla CSS,
+                sass, CSS-in-JS (styled-components) but my favorite is
+                tailwindcss.
               </p>
             </div>
           </div>
@@ -374,8 +375,8 @@ const TechStack = () => {
                 </CustomTooltip>
               </div>
               <p className="align-middle text-xl">
-                I&#39;m not a back-end guru but I know how to build servers/APIs
-                when I need to, I build RESTfull/GraphQL APIs using Expressjs.
+                Prisma is the ORM of choice for me, I use MongoDB with Mongoose
+                for some projects, I know the basics of SQL (PostgreSQL){" "}
               </p>
             </div>
           </div>
@@ -470,8 +471,8 @@ const TechStack = () => {
                 </CustomTooltip>
               </div>
               <p className="align-middle text-xl">
-                Prisma is the ORM of choice for me, I use MongoDB with Mongoose
-                for some projects, I know the basics of SQL (PostgreSql){" "}
+                I use GIT to track my projects, Github to store them, vscode to
+                wright the code, ESLint to write better quality code.
               </p>
             </div>
           </div>
@@ -617,9 +618,9 @@ const TechStack = () => {
                 </CustomTooltip>
               </div>
               <p className="align-middle text-xl">
-                I&#39;m really intrested on web3 technologies and I try to learn
-                a lot about the space, I&#39;m also try to pick some CI/CD stuff
-                to be a well rounded full stack enginner.
+                I&#39;m really interested in web3 technologies and I try to
+                learn a lot about the space, I&#39;m also trying to pick some
+                CI/CD stuff to be a well-rounded full-stack engineer.
               </p>
             </div>
           </div>
