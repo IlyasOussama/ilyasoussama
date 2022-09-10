@@ -26,7 +26,7 @@ const BlogCardTwo = ({
   postLink,
 }: BlogCardProps) => {
   return (
-    <div className="overflow-hidden bg-white rounded shadow dark:bg-gray-900 dark:shadow-gray-800">
+    <div className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu overflow-hidden bg-white rounded shadow dark:bg-gray-900 dark:shadow-gray-800">
       <div className="p-5">
         <div className="relative">
           <Link as={`/blog/${postLink}`} href="/blog/[slug] ">

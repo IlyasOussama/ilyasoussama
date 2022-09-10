@@ -23,7 +23,7 @@ export default function ProjectCard({
   className,
 }: ProjectCardProps) {
   return (
-    <div className="overflow-hidden bg-white rounded shadow dark:bg-gray-900 dark:shadow-gray-800">
+    <div className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu overflow-hidden bg-white rounded shadow dark:bg-gray-900 dark:shadow-gray-800">
       <div className="p-5">
         <div className="relative">
           <a href="#" title="" className="block aspect-w-4 aspect-h-3">
