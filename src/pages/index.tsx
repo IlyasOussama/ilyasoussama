@@ -52,7 +52,7 @@ const Home = ({ allPosts }: Props) => {
       <main className="h-full mx-6 xl:mx-auto max-w-6xl ">
         <div className="mt-20 max-w-4xl text-left">
           <h2 className="text-4xl font-semibold">
-            Hi ! I&#39;m Ilyas — A Full-Stack Software Enginner
+            Hi ! I&#39;m Ilyas — A Full-Stack Software Developer
           </h2>
           <p className="mt-2 font-normal text-4xl text-gray-500 dark:text-gray-400">
             I build fast, secure, and scalable web applications using modern web

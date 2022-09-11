@@ -620,7 +620,7 @@ const TechStack = () => {
               <p className="align-middle text-xl">
                 I&#39;m really interested in web3 technologies and I try to
                 learn a lot about the space, I&#39;m also trying to pick some
-                CI/CD stuff to be a well-rounded full-stack engineer.
+                CI/CD stuff to be a well-rounded full-stack developer .
               </p>
             </div>
           </div>
