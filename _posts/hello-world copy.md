@@ -1,5 +1,5 @@
 ---
-title: "It's didn't take me 3 months, it toke me 3 years and it's totaly worth it"
+title: "It didn't take me 3 months, it tokes me 3 years and it's totally worth it"
 excerpt: ""
 
 coverImage: "/01.jpg"
