@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
 
 import ThemeButton from "../Buttons/ThemeButton";
 
@@ -32,7 +33,7 @@ const NavItem = ({ href, text }: NavItemProps) => {
 const Navbar = () => {
   return (
     <nav className="py-4 mx-6 xl:mx-auto flex justify-between items-center">
-      <div className="hidden md:inline-block">Logo</div>
+      <Link href="/">Logo</Link>
       <div>
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
