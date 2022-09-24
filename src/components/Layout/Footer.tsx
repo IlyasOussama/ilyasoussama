@@ -10,7 +10,10 @@ const Footer = () => {
   const { theme, setTheme } = useTheme();
   const [copyStatus, setCopyStatus] = useState("Click the mail logo to copy");
   return (
-    <footer className="mb-8 mt-20 border-t border-gray-100 dark:border-gray-800 flex flex-col items-center">
+    <footer
+      id="contact"
+      className="mb-8 mt-20 border-t border-gray-100 dark:border-gray-800 flex flex-col items-center"
+    >
       <p className="mt-8 mb-4 font-medium text-gray-600 dark:text-gray-300">
         Reach me out
       </p>
