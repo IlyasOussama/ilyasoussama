@@ -304,15 +304,15 @@ const Home = ({ allPosts }: Props) => {
           <h2 className="text-3xl font-bold mb-6">Feautured Projects</h2>
           <div className="flex flex-col gap-5 md:flex-row">
             <ProjectCard
-              projectName="Project 01"
-              projectDescription="das dkw erw mcxz ewqnm mnfsdew korw mcxvsd jrkwe nmrkwe jnkwer ncx"
-              projectLink="project1"
-              projectImage="/01.jpg"
+              projectName="Personal Website"
+              projectDescription="Next.js, TypeScript, TailwindCSS personal website"
+              projectLink="portfolio"
+              projectImage="/portfolio.webp"
             />
             <ProjectCard
-              projectName="Project 02"
-              projectDescription="das dkw erw mcxz ewqnm mnfsdew korw mcxvsd jrkwe nmrkwe jnkwer ncx"
-              projectLink="project2"
+              projectName="Ecom"
+              projectDescription="Next.js, TypeScript, Medusajs ecommerce website"
+              projectLink="ecomm"
               projectImage="/02.jpg"
             />
           </div>
@@ -320,6 +320,28 @@ const Home = ({ allPosts }: Props) => {
             See more project
           </ButtonLink>
         </div>
+
+        <div className="mt-20" id="projects">
+          <h2 className="text-3xl font-bold mb-6">Things I&#39;m Workin On</h2>
+          <div className="flex flex-col gap-5 md:flex-row">
+            <ProjectCard
+              projectName="Open Source NFT Marketplace"
+              projectDescription="Next.js, TypeScript, solidity nft marketplace"
+              projectLink="nft-marketplace"
+              projectImage="/nft-marketplace.webp"
+            />
+            <ProjectCard
+              projectName="DEX"
+              projectDescription="Next.js, TypeScript & Solidity decentralized exchange "
+              projectLink="dex"
+              projectImage="/nft-marketplace.webp"
+            />
+          </div>
+          <ButtonLink className="mt-4" href="/projects">
+            More
+          </ButtonLink>
+        </div>
+
         <a />
       </main>
     </>

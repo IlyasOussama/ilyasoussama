@@ -2,10 +2,10 @@
 title: "I left medical school after more than 5 years"
 excerpt: "aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
 
-coverImage: "/02.jpg"
+coverImage: "/left.webp"
 date: "2020-03-16T05:35:07.322Z"
 author:
-  name: Tim Neutkens
+  name: Ilyas Oussama
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"

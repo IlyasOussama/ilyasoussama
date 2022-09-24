@@ -2,10 +2,10 @@
 title: "It didn't take me 3 months, it tokes me 3 years and it's totally worth it"
 excerpt: ""
 
-coverImage: "/01.jpg"
+coverImage: "/took.webp"
 date: "2020-03-16T05:35:07.322Z"
 author:
-  name: Tim Neutkens
+  name: Ilyas Oussama
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
