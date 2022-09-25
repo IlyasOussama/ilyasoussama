@@ -6,7 +6,7 @@ import MobileMenu from "./MobileMenu";
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <div className="bg-red-500 text-xl font-semibold p-3 text-center">
+      <div className="bg-red-500 text-xl font-semibold p-3 text-center text-white">
         Still working on it, Excuse the unfinished work and the dummy data, have
         a great day!{" "}
       </div>
