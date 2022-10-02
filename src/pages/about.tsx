@@ -1,5 +1,5 @@
 const About = () => {
-  return <div>About page</div>;
+  return <div className="animate-[wiggle_1s_ease-in-out]">About page</div>;
 };
 
 export default About;

@@ -21,7 +21,7 @@ export default function Post({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <div>
+    <div className="animate-[wiggle_1s_ease-in-out]">
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (

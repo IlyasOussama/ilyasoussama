@@ -1,5 +1,5 @@
 const Projects = () => {
-  return <div>Projects</div>;
+  return <div className="animate-[wiggle_1s_ease-in-out]">Projects</div>;
 };
 
 export default Projects;

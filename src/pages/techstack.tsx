@@ -4,7 +4,7 @@ import CustomTooltip from "../components/Tooltip";
 const TechStack = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="mx-6 xl:mx-auto max-w-6xl">
+    <div className="mx-6 xl:mx-auto max-w-6xl animate-[wiggle_1s_ease-in-out]">
       <h1 className="text-3xl font-bold mb-6">Tech stack & Tools</h1>
       <div>
         <div className="mt-10">

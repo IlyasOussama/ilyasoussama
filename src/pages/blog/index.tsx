@@ -16,8 +16,9 @@ const Blog = ({ allPosts }: Props) => {
       <Head>
         <title>Ilyas Oussama Blog</title>
       </Head>
-
-      {morePosts.length > 0 && <AllPosts posts={allPosts} />}
+      <div className="animate-[wiggle_1s_ease-in-out]">
+        {morePosts.length > 0 && <AllPosts posts={allPosts} />}
+      </div>
     </>
   );
 };
