@@ -7,7 +7,7 @@ import { getAllPosts } from "../lib/api";
 
 import { FileTextIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Button from "../components/Buttons/Button";
 import AllPosts from "../components/Blog/AllPosts";
@@ -49,7 +49,7 @@ const Home = ({ allPosts }: Props) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-full mx-6 xl:mx-auto max-w-6xl ">
+      <main className="h-full mx-6 xl:mx-auto max-w-6xl animate-[wiggle_1s_ease-in-out]">
         <div className="mt-20 max-w-4xl text-left">
           <h2 className="text-4xl font-semibold">
             Hi ! I&#39;m Ilyas — A Full-Stack Software Developer
