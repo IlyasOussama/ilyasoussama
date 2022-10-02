@@ -45,10 +45,6 @@ export default function ProjectCard({
                 {projectName}{" "}
               </a>
             </Link>
-            <a href="#" title="" className="text-black dark:text-white">
-              {" "}
-              {projectName}{" "}
-            </a>
           </p>
           <p className="mt-4 text-base text-gray-600 dark:text-gray-400">
             {projectDescription}
