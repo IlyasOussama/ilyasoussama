@@ -292,14 +292,6 @@ const Home = ({ allPosts }: Props) => {
           </ButtonLink>
         </section>
 
-        <section id="blog" className="mt-20">
-          <h2 className="text-3xl font-bold mb-6">Feautured Posts</h2>
-          {homePosts.length > 0 && <AllPosts posts={homePosts} />}
-          <ButtonLink className="mt-4" href="/blog">
-            Read More
-          </ButtonLink>
-        </section>
-
         <div className="mt-20" id="projects">
           <h2 className="text-3xl font-bold mb-6">Feautured Projects</h2>
           <ul className="flex flex-col gap-5 md:flex-row">
@@ -341,6 +333,14 @@ const Home = ({ allPosts }: Props) => {
             More
           </ButtonLink>
         </div>
+
+        <section id="blog" className="mt-20">
+          <h2 className="text-3xl font-bold mb-6">Feautured Posts</h2>
+          {homePosts.length > 0 && <AllPosts posts={homePosts} />}
+          <ButtonLink className="mt-4" href="/blog">
+            Read More
+          </ButtonLink>
+        </section>
 
         <a />
       </main>
