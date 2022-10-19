@@ -431,7 +431,7 @@ const TechStack = () => {
                   <svg
                     width="96px"
                     height="96spx"
-                    className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
+                    className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu mr-2"
                     viewBox="0 0 256 256"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -489,7 +489,7 @@ const TechStack = () => {
                     viewBox="0 0 48 48"
                     width="96px"
                     height="96px"
-                    className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu"
+                    className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu mr-2"
                   >
                     <path
                       fill="#2395ec"
