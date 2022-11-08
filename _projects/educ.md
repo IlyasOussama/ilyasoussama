@@ -1,5 +1,5 @@
 ---
-name: "DEX"
+name: "Web3 E-learning Platform"
 description: "Project 01 "
 projectImage: "/ll.png"
 slug: "educ"
