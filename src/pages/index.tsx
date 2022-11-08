@@ -275,10 +275,12 @@ const Home = ({ allPosts }: Props) => {
               </div>
               <p className="align-middle text-xl">
                 I write code in Javascript/Typescript depending on the project
-                size, My framework of choice is Next.js, I use Tailwindcss for
+                size, My framework of choice is Next.js, I use Tailwind CSS for
                 styling. <br />
                 I use Prisma to cominucate with databases. <br /> When I need to
-                build a server/API my go to is Nodejs (Expressjs/fastify).
+                build a server/API my go to is Nodejs (Expressjs/fastify).{" "}
+                <br />
+                I&#39;m enthusiastic about web3.
               </p>
             </div>
           </div>
@@ -296,16 +298,16 @@ const Home = ({ allPosts }: Props) => {
           <h2 className="text-3xl font-bold mb-6">Feautured Projects</h2>
           <ul className="flex flex-col gap-5 md:flex-row">
             <ProjectCard
+              projectName="DEX"
+              projectDescription="Next.js, TypeScript & Solidity decentralized exchange "
+              projectLink="dex"
+              projectImage="/nh.png"
+            />
+            <ProjectCard
               projectName="Personal Website"
               projectDescription="Next.js, TypeScript, TailwindCSS personal website"
               projectLink="portfolio"
               projectImage="/portfolio.webp"
-            />
-            <ProjectCard
-              projectName="Ecom"
-              projectDescription="Next.js, TypeScript, Medusajs ecommerce website"
-              projectLink="ecomm"
-              projectImage="/02.jpg"
             />
           </ul>
           <ButtonLink className="mt-4" href="/projects">
@@ -314,18 +316,18 @@ const Home = ({ allPosts }: Props) => {
         </div>
 
         <div className="mt-20" id="projects">
-          <h2 className="text-3xl font-bold mb-6">Things I&#39;m Workin On</h2>
+          <h2 className="text-3xl font-bold mb-6">Things I&#39;m Working On</h2>
           <ul className="flex flex-col gap-5 md:flex-row">
+            <ProjectCard
+              projectName="Web3 E-learning Platform"
+              projectDescription="Livepeer, Lens Protocol, elearning platform"
+              projectLink="educ"
+              projectImage="/ll.png"
+            />
             <ProjectCard
               projectName="Open Source NFT Marketplace"
               projectDescription="Next.js, TypeScript, solidity nft marketplace"
               projectLink="nft-marketplace"
-              projectImage="/nft-marketplace.webp"
-            />
-            <ProjectCard
-              projectName="DEX"
-              projectDescription="Next.js, TypeScript & Solidity decentralized exchange "
-              projectLink="dex"
               projectImage="/nft-marketplace.webp"
             />
           </ul>
