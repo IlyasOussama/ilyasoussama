@@ -1,7 +1,7 @@
 ---
 name: "DEX"
 description: "Project 01 "
-projectImage: "/portfolio.webp"
+projectImage: "/nh.png"
 slug: "dex"
 ---
 

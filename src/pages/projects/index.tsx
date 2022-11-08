@@ -11,6 +11,7 @@ type Props = {
 const Projects = ({ allProjects }: Props) => {
   const heroPost = allProjects[0];
   const morePosts = allProjects.slice(1);
+
   return (
     <>
       <Head>

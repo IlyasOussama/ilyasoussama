@@ -1,7 +1,7 @@
 ---
 name: "Nft"
 description: "Project 01 "
-projectImage: "/portfolio.webp"
+projectImage: "/nft-marketplace.webp"
 slug: "nft-marketplace"
 ---
 
