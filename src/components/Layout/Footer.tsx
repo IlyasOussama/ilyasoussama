@@ -41,7 +41,7 @@ const Footer = () => {
 
         <a
           className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu cursor-pointer inline-flex items-center justify-center rounded-sm focus:outline-none focus-visible:ring focus-visible:ring-primary-300"
-          href="https://github.com/IlyasOussama/"
+          href="https://github.com/ilyesOussama/"
           target="_blank"
           rel="noreferrer"
         >
