@@ -1,5 +1,5 @@
 ---
-title: "Preview Mode for Static Generation"
+title: "Post 06"
 excerpt: "aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla"
 date: "2020-03-16T05:35:07.322Z"
 

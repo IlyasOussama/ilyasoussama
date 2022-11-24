@@ -71,7 +71,7 @@ const Footer = () => {
           )}
         </a>
         <a
-          href="https://twitter.com/ilyaasOussama"
+          href="https://twitter.com/IlyeesOussama"
           target="_blank"
           rel="noreferrer"
           className="scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu cursor-pointer  inline-flex items-center justify-center rounded-sm focus:outline-none focus-visible:ring focus-visible:ring-primary-300"
@@ -96,7 +96,7 @@ const Footer = () => {
         </a>
       </div>
       <p className="mt-4 text-sm text-gray-600 dark:text-gray-300">
-        © Ilyas Oussama {new Date().getFullYear()}
+        © Ilyes Oussama {new Date().getFullYear()}
       </p>
     </footer>
   );

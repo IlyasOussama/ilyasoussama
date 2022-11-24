@@ -6,6 +6,8 @@ type ProjectType = {
   projectImage: string;
   projectLink: string;
   content: string;
+  liveLink: string;
+  githubLink: string;
 };
 
 export default ProjectType;

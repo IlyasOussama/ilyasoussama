@@ -296,12 +296,12 @@ const Home = ({ allPosts }: Props) => {
 
         <div className="mt-20" id="projects">
           <h2 className="text-3xl font-bold mb-6">Feautured Projects</h2>
-          <ul className="flex flex-col gap-5 md:flex-row">
+          <ul className="flex flex-col gap-5 md:grid md:grid-cols-2">
             <ProjectCard
-              projectName="DEX"
-              projectDescription="Next.js, TypeScript & Solidity decentralized exchange "
-              projectLink="dex"
-              projectImage="/nh.png"
+              projectName="Open learning platform"
+              projectDescription="Open source social media e-learning platform, where students can get the best education possible, and teachers get paids what they deserve."
+              projectLink="open-learnig-platform"
+              projectImage="/ll.png"
             />
             <ProjectCard
               projectName="Personal Website"
@@ -319,10 +319,10 @@ const Home = ({ allPosts }: Props) => {
           <h2 className="text-3xl font-bold mb-6">Things I&#39;m Working On</h2>
           <ul className="flex flex-col gap-5 md:flex-row">
             <ProjectCard
-              projectName="Web3 E-learning Platform"
-              projectDescription="Livepeer, Lens Protocol, elearning platform"
-              projectLink="educ"
-              projectImage="/ll.png"
+              projectName="DEX"
+              projectDescription="DEX built using: Hardhat, Next.js, TypeScript"
+              projectLink="dex"
+              projectImage="/nh.png"
             />
             <ProjectCard
               projectName="Open Source NFT Marketplace"

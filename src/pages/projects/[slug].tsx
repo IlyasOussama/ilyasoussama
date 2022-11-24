@@ -8,6 +8,10 @@ import type ProjectType from "../../interfaces/project";
 import PostTitle from "../../components/Blog/PostTitle";
 import ProjectHeader from "../../components/ProjectHeader";
 import PostBody from "../../components/Blog/PostBody";
+import Button from "../../components/Buttons/Button";
+import Link from "next/link";
+import ButtonLink from "../../components/Links/ButtonLink";
+import clsx from "clsx";
 
 type Props = {
   project: ProjectType;
@@ -20,6 +24,8 @@ export default function Project({ project, moreProjects, preview }: Props) {
   if (!router.isFallback && !project?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
+  console.log(project);
   return (
     <div className="animate-[wiggle_1s_ease-in-out]">
       {router.isFallback ? (
@@ -28,13 +34,42 @@ export default function Project({ project, moreProjects, preview }: Props) {
         <>
           <article className="mb-32">
             <Head>
-              <title>{project.name} | Ilyas Oussama Blog</title>
+              <title>{project.name} | Ilyas Oussama Projects</title>
             </Head>
-            <ProjectHeader
-              name={project.name}
-              coverImage={project.projectLink}
-            />
-            <PostBody content={project.content} />
+            <div>
+              <div className="flex gap-2 mx-auto items-center justify-center">
+                <Link href={project.liveLink}>
+                  <a
+                    target="_blank"
+                    className={clsx(
+                      "px-4 py-2 font-bold border border-gray-300 shadow-sm dark:border-gray-600 rounded-lg",
+                      "scale-100 hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu transition duration-100",
+                      "bg-green-500 text-gray-100 disabled:bg-gray-200  dark:text-gray-300 dark:disabled:bg-gray-700"
+                    )}
+                  >
+                    Live
+                  </a>
+                </Link>
+                <Link href={project.githubLink} target="_blank">
+                  <a
+                    target="_blank"
+                    className={clsx(
+                      "px-4 py-2 font-bold border border-gray-300 shadow-sm dark:border-gray-600 rounded-lg",
+                      "scale-100 hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu transition duration-100",
+                      "bg-white text-gray-600 disabled:bg-gray-200 dark:bg-gray-900 dark:text-gray-300 dark:disabled:bg-gray-700"
+                    )}
+                  >
+                    Source code
+                  </a>
+                </Link>
+              </div>
+
+              <ProjectHeader
+                name={project.name}
+                coverImage={project.projectLink}
+              />
+              <PostBody content={project.content} />
+            </div>
           </article>
         </>
       )}{" "}
@@ -54,6 +89,8 @@ export async function getStaticProps({ params }: Params) {
     "slug",
     "projectImage",
     "content",
+    "githubLink",
+    "liveLink",
   ]);
   const content = await markdownToHtml(project.content || "");
 

@@ -33,7 +33,11 @@ const NavItem = ({ href, text }: NavItemProps) => {
 const Navbar = () => {
   return (
     <nav className="py-4 mx-6 xl:mx-auto flex justify-between items-center">
-      <Link href="/">Logo</Link>
+      <Link href="/">
+        <a href="" className="font-bold">
+          IlyOu
+        </a>
+      </Link>
       <div>
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />

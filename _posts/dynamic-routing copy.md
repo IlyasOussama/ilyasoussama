@@ -1,7 +1,7 @@
 ---
-title: "A more realistic web developer roadmap"
+title: "Post 4"
 excerpt: "Straight to the point, not complicated web development roadmap "
-coverImage: "/roadmap.webp"
+coverImage: "/nh.png"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Ilyas Oussama

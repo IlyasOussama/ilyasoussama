@@ -1,8 +1,10 @@
 ---
 name: "DEX"
-description: "Project 01 "
+description: "DEX built using: Hardhat, Next.js, TypeScript"
 projectImage: "/nh.png"
 slug: "dex"
+liveLink: ""
+githubLink: ""
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
